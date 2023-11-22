@@ -1,0 +1,141 @@
+ * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+body{
+    font-family: inter, sans-serif;
+    background: var(--bckg);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+:root{
+    --wht : #fff;
+    --focus : #005BD3;
+    --bckg: #F1F1F1;
+    --press: #F0F0F0;
+    --hover: #F7F7F7;
+    --s200: #FFFFFF;
+    --s100: hsl(0, 0%, 0%, 0.7);
+    --s50: #EBEBEB;
+    --dark: #475467;
+    --mid: #616161;
+    --c300: #1C181D;
+    --c200: #322F33;
+    --c100: #616161;
+    --c50: #656266;
+    --light: #E3E3E3;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.head{
+    background: var(--c300);
+    color: var(--wht);
+    justify-content: space-between;
+    padding: 0 1rem;
+    /* margin: 0 auto; */
+    height: 60px;
+}
+.logo img{
+    width: 30px;
+}
+.logo i{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.search{
+    border-radius: 3px;  
+    border: 1px solid var(--c100);
+    background:var(--c200) ;
+    width: 25rem;
+    border-radius: .3rem;
+}
+ /* .search :hover{
+    border: 1px solid var(--light);
+} */
+.search input{
+  padding: .7em;
+border: none;
+color:var(--light);
+background: transparent;
+font-size: .8rem;
+background: none;
+width: 25rem;
+outline: none;
+}
+.search img{
+width: 1rem;
+margin-left: .7em;
+}
+.user_tag .bell{
+    width: 1.3rem;
+    padding: .4rem;
+     border-radius: .4rem;
+    background: var(--c200);
+    margin-right: .7rem;
+}
+.user_tag :hover{
+    background: var(--c50);
+  
+}
+.acct :hover{
+    background: var(--c50);
+    border-radius: .4rem;
+}
+.acct{
+  font-size: .9rem;
+    background: var(--c200);
+    border-radius: .4rem;
+}
+
+.acct_name{
+   margin-right: .5rem;
+    padding: .5rem;
+    color: var(--light);
+}
+.acct_icon{
+    background: #36FBA1 !important;
+    padding: .4rem;
+    border-radius: .5rem;
+    height: 100%;
+    color: var(--c300);
+}
+
+/* MEDIA QUERY */
+@media(max-width: 750px){
+.search{
+    width: 17rem;
+}
+.logo img {
+    width: 25px;
+}
+}
+@media(max-width: 620px){
+    .search{
+        width: 13rem;
+    }
+    .logo img {
+        width: 22px;
+    }
+    }
+    @media(max-width: 550px){
+        .logo i{
+          display: none;
+        }
+    }
+    @media(max-width: 500px){
+      .acct .acct_name{
+          display: none;
+      }
+      .user_tag .bell{
+        width: 1.3rem;
+        padding: .4rem;
+         border-radius: .4rem;
+        background: none;
+      }
+    }
