@@ -179,10 +179,37 @@ width: 1.5rem;
 .setup_step{
     background: var(--light);
     align-items: flex-start;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    padding: .7rem .6rem 1.5rem .6rem;
+    border-radius: .4rem;
 }
 .tick{
     align-items: flex-start;
+}
+.setup_step .tick{
+    margin-right: .5rem;
+}
+.setup_step h4{
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+}
+.setup_step .set_btn{
+padding: .6rem .8rem;
+border-radius: .5rem;
+color: var(--bckg);
+background: var(--c300);
+}
+.step_info p{
+    margin-bottom: 2rem;
+}
+.step_info .learn{
+    color: #005BD3;
+}
+.step_img{
+    margin-left: 5rem;
+}
+.toggle, .step_img{
+    /* display: none; */
 }
 
 /* MEDIA QUERY */
@@ -219,6 +246,18 @@ width: 1.5rem;
     @media(max-width: 550px){
         .logo i{
           display: none;
+        }
+        .step_img{
+            display: none;
+        }
+        p{
+            font-size: .9rem;
+        }
+        .setup_step p,a{
+            font-size: .9rem;
+        }
+        .guide_setup{
+            padding: .7rem .5rem;
         }
     }
     @media(max-width: 500px){
