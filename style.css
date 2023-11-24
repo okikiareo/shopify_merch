@@ -204,6 +204,7 @@ background: var(--c300);
 }
 .step_info .learn{
     color: #005BD3;
+    margin-left: .5rem;
 }
 .step_img{
     margin-left: 5rem;
@@ -253,8 +254,18 @@ background: var(--c300);
         p{
             font-size: .9rem;
         }
+        .set_btn{
+            font-size: .8rem;
+        }
+        .toggle p{
+            font-size: .8rem;
+            line-height: 1.2rem;
+        }
+        .setup_step h4{
+            font-size: .8rem;
+        } 
         .setup_step p,a{
-            font-size: .9rem;
+            font-size: .8rem;
         }
         .guide_setup{
             padding: .7rem .5rem;
