@@ -167,7 +167,7 @@ width: 1.5rem;
     border-radius: 5px;
     background-color: var(--light);
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 .guide_trk_inner{
     width: 20%;
@@ -209,10 +209,52 @@ background: var(--c300);
 .step_img{
     margin-left: 5rem;
 }
-.toggle, .step_img{
-    /* display: none; */
+       
+.menus{
+    right: 1rem;
+    position: absolute;
+    margin-top:.6rem ;
+    max-width: 350px; 
+     width: 100%;
+    padding: .5rem .6rem; 
+    border-radius: .9rem;
+    background-color: var(--wht);
+}
+.menu_head{
+    background-color: var(--light);
+    justify-content: space-between;
+    padding: .4rem .6rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+}
+.menu_head .acct_icon{
+margin-right: .6rem;
 }
 
+.sub-menu{
+    margin-bottom: .5rem;
+}
+.sub-menu a{
+    color: var(--c300);
+    font-weight: 500;
+     margin-top: 1.3rem;
+}
+.sub-menu .store img{
+width: 1.7rem;
+margin-right: .5rem;
+}
+.hr{
+    margin: .8rem 0rem;
+    background:  red;
+}
+.acct-mail{
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+ .email{
+    color:var(--c100) ;
+}
 /* MEDIA QUERY */
 @media(max-width:1000px){
 .inner_info {
@@ -233,6 +275,7 @@ background: var(--c300);
     .inner_info {
         width: 90%;
     }
+   
     }
 @media(max-width: 620px){
     .logo img {
@@ -290,6 +333,7 @@ background: var(--c300);
          border-radius: .4rem;
         background: none;
       }
+
     }
     @media(max-width: 420px){
         .head{
@@ -304,6 +348,15 @@ background: var(--c300);
     .search img{
         width: .8rem;
     }
+    .menus{
+        width: 85%;
+   }
+   .menu_head {
+    font-size: .8rem;
+   }
+   .menus{
+    right: .6rem;
+   }
 }
 @media(max-width: 380px){
     .acct_icon{
