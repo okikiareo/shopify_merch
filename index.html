@@ -4,179 +4,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
     <title>shopp merch-admin</title>
+    <link rel="stylesheet" href="./app.css">
 </head>
 
 <body>
+    <svg xmlns="https://www.w3.org/2000/svg" style="display:none">
+        <defs>
+            <symbol id="icon-look" viewBox="0 0 24 24">
+                <path
+                    d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                    fill="#616161" />
+            </symbol>
+            <symbol id="icon-bell" viewBox="0 0 24 24">
+                <path
+                    d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z"
+                    fill="#FFFFFF" />
+            </symbol>
+            <symbol id="icon-sort" viewBox="0 0 24 24">
+                <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" />
+            </symbol>
+            <symbol id="icon-mark" viewBox="0 0 24 24">
+                <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" />
+                <path d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z" />
+            </symbol>
+            <symbol id="icon-shop" viewBox="0 0 24 24">
+                <path
+                    d="M19.148 2.971A2.008 2.008 0 0 0 17.434 2H6.566c-.698 0-1.355.372-1.714.971L2.143 7.485A.995.995 0 0 0 2 8a3.97 3.97 0 0 0 1 2.618V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.382A3.97 3.97 0 0 0 22 8a.995.995 0 0 0-.143-.515l-2.709-4.514zm.836 5.28A2.003 2.003 0 0 1 18 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.22 4h2.214l2.55 4.251zM10.819 4h2.361l.813 4.065C13.958 9.137 13.08 10 12 10s-1.958-.863-1.993-1.935L10.819 4zM6.566 4H8.78l-.76 3.804.02.004C8.025 7.872 8 7.932 8 8c0 1.103-.897 2-2 2a2.003 2.003 0 0 1-1.984-1.749L6.566 4zM10 19v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.142c.321.083.652.142 1 .142a3.99 3.99 0 0 0 3-1.357c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357A3.99 3.99 0 0 0 18 12c.348 0 .679-.059 1-.142V19h-3z" />
+            </symbol>
+            <symbol id="icon-done" viewBox="0 0 24 24">
+                <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z" />
+            </symbol>
+            <symbol id="icon-hide" viewBox="0 0 24 24">
+                <path
+                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                    fill="#FFFFFF" />
+            </symbol>
+            <symbol id="icon-angd" viewBox="0 0 24 24">
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z" fill="#4A4A4A" />
+            </symbol>
+            <symbol id="icon-angu" viewBox="0 0 24 24">
+                <path d="m6.293 13.293 1.414 1.414L12 10.414l4.293 4.293 1.414-1.414L12 7.586z" fill="#4A4A4A" />
+            </symbol>
+            <symbol id="icon-dash" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-dasharray="5 5" />
+            </symbol>
+            <symbol id="icon-spin" viewBox="0 0 24 24">
+                <path
+                    d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                    stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="icon-chek" viewBox="0 0 24 24">
+                <circle cx="11.9996" cy="12" r="10" fill="#1C181D" stroke="#1C181D" stroke-width="2.08333"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.8163 8.64149C17.0604 8.88557 17.0604 9.2813 16.8163 9.52538L11.3997 14.942C11.1556 15.1861 10.7599 15.1861 10.5158 14.942L7.80745 12.2337C7.56337 11.9896 7.56337 11.5939 7.80745 11.3498C8.05153 11.1057 8.44725 11.1057 8.69133 11.3498L10.9577 13.6162L15.9324 8.64149C16.1765 8.39742 16.5723 8.39742 16.8163 8.64149Z"
+                    fill="white" />
+            </symbol>
+        </defs>
+    </svg>
+    <!-- HEAD -->
+    <header class="header">
+        <div class="header_inner wrap flex">
+            <a class="head_logo" href="https://www.shopify.com" aria-label="Logo"></a>
+            <div class="header_search">
+                <form class="" action="">
+                    <div class="head_search">
+                        <label class="head_label flex" for="look">
+                            <svg width="24" height="24" aria-label="Search icon">
+                                <use href="#icon-look" />
+                            </svg>
+                        </label>
+                        <input id="input " class="header__input" type="search" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="header_btns flex">
+                <button id="alert-icon" class="alert_btn btn--focus" aria-haspopup="true" aria-expanded="false"
+                    aria-controls="alert-card" aria-label="Toggle alert">
+                    <svg width="24" height="24" aria-label="Alert icon">
+                        <use href="#icon-bell" />
+                    </svg>
+                </button>
+                <button id="menus-icon" class="acct_icon btn--focus flex user" aria-haspopup="true"
+                    aria-expanded="false" aria-controls="menus-card">
+                    <span class="head__btn_name user">Davii collections</span>
+                    <span class="header__button-lead lead user">DC</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN SECTION -->
     <main class="main">
-        <header class="head flex">
-            <a href="https://shopify.com" class="logo flex">
-                <img src="img/shop.svg" alt="">
-                <i>shopify</i>
-            </a>
-            <div class="search flex">
-                <img src="img/search.svg" />
-                <input type="text" id="input1" placeholder="Search" class="input" />
-            </div>
-            <div class="user_tag flex">
-                <img src="img/bell.svg" alt="" class="bell">
-                <div class="acct flex">
-                    <p class="acct_name">Davii Collections</p>
-                    <p class="acct_icon">DC</p>
-                </div>
-            </div>
-        </header>
-        <section class="menus">
-            <div class="menu_head flex">
-                <div class="  flex">
-                    <p class="acct_icon">DC</p>
-                    <h4 class="menu_acct_name">Davii Collections</h4>
-                </div>
-                <img src="img/ticked.svg" alt="">
-            </div>
-            <div class="sub-menu">
-                <a href="" class="flex store">
-                    <img src="img/house.svg" alt=""> All Stores</a>
-                <div class="hr">
-                    <hr>
-                </div>
-                <a href="" class="flex">Help Center</a>
-                <a href="" class="flex">Changelog</a>
-                <a href="" class="flex">Community forums</a>
-                <a href="" class="flex">Hire a Shopify Partner</a>
-                <a href="" class="flex">Keyboard shortcuts</a>
-                <div class="hr">
-                    <hr>
-                </div>
-                <a href="" class="flex acct-mail">
-                    <p>David Micheal </p>
-                    <p class="email">davidmicheal@gmail.com</p>
-                </a>
-                <a href="" class="flex">Manage account</a>
-                <a href="" class="flex">Log Out</a>
-            </div>
-        </section>
-        <section class="alert">
-            <div class="alert_head flex">
-                <h4>Alerts</h4>
-                <div class="alert_icons flex">
-                    <img src="img/line.svg" class="line" alt="">
-                    <img src="img/alertick.svg" class="alertick" alt="">
-                </div>
-            </div>
-            <div class="alert_info">
-                <p>Alert about your store and account will appear here</p>
-            </div>
-        </section>
-        <section class="inner flex">
-            <div class="inner_info">
-                <div class="plan_notifi flex">
-                    <p>Extend your trial for $1/month for 3 months on select plans.</p>
-                    <div class="select_notifi flex">
-                        <a href="" class="select">Select a plan</a>
-                        <img src="img/x.svg" class="close" alt="">
+        <section class="container">
+            <div class="container__wrap wrap">
+                <div id="alert-card" class="container__alert container--popup wrap" role="alert" aria-labelledby="alert-icon">
+                    <div class="container__alert-head flex">
+                        <h2 class="container__alert-title title-lg">
+                            Alerts
+                        </h2>
+                        <div class="flex">
+                            <button class="container__alert-icon" aria-label="sort alert">
+                                <svg width="24" height="24">
+                                    <use href="#icon-sort" />
+                                </svg>
+                            </button>
+                            <button class="container__alert-icon" aria-label="mark alert">
+                                <svg width="24" height="24">
+                                    <use href="#icon-mark" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container__alert-body">
+                        Alerts about your store and account will show here
                     </div>
                 </div>
-                <div class="guide_setup ">
-                    <div class="setup_head flex space_bwt">
-                        <h4>Setup guide</h4>
-                        <img src="img/down.svg" class="down" alt="">
+                <div id="menus-card" class="container__menu container--popup" role="menu" aria-labelledby="menus-icon">
+                    <ul class="container__menu-list" role="group">
+                        <li class="container__menu-item container__menu-user flex">
+                            <div>
+                                <span class="container__menu-mark lead">DC</span>
+                                <span class="container__menu-name">
+                                    Davii Collections
+                                </span>
+                            </div>
+                            <svg width="24" height="24">
+                                <use href="#icon-done" />
+                            </svg>
+                        </li>
+                        <li class="container__menu-item container__menu-last">
+                            <a class="container__menu-link flex" role="menuitem" href="https://admin.shopify.com">
+                                <svg class="container__menu-icon" width="24" height="24">
+                                    <use href="#icon-shop" />
+                                </svg>
+                                All stores
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="container__menu-list container__menu-line" role="group">
+                        <li class="container__menu-item">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Help
+                                Center</a>
+                        </li>
+                        <li class="container__menu-item">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Changelog</a>
+                        </li>
+                        <li class="container__menu-item">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Community
+                                forums</a>
+                        </li>
+                        <li class="container__menu-item">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Hire a Shopify
+                                Partner</a>
+                        </li>
+                        <li class="container__menu-item container__menu-last">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Keyboard
+                                shortcuts</a>
+                        </li>
+                    </ul>
+                    <ul class="container__menu-list" role="group">
+                        <li class="container__menu-item">
+                            David Micheal
+                            <span class="container__item-mail">davidmicheal@gmail.com</span>
+                        </li>
+                        <li class="container__menu-item">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Manage
+                                account</a>
+                        </li>
+                        <li class="container__menu-item container__menu-last">
+                            <a class="container__menu-link" role="menuitem" href="https://admin.shopify.com">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="close-card" class="container__card container__trial flex" role="region" aria-labelledby="close-icon">
+                    <div class="container__trial-text">
+                        Extend your trial for $1/month for 3 months on select plans.
                     </div>
-                    <p>Use this personalized guide to get your store up and running</p>
-                    <div class="flex">
-                        <span class="guide_no">1/5 completed</span>
-                        <span class="guide_track">
-                            <span class="guide_trk_inner">
+                    <div class="container__trial-wrap flex">
+                        <a class="container__trial-plan btn btn--light" href="https://www.shopify.com/pricing">Select a
+                            plan</a>
+                        <button id="close-icon" class="container__trial-hide btn--focus" aria-label="Close trial">
+                            <svg width="24" height="24" aria-label="Close icon">
+                                <use href="#icon-hide" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="container__card container__guide">
+                    <button id="dropd-icon" class="container__guide-arrow container--focus btn--focus flex"
+                        aria-label="Toogle setup" aria-expanded="false" aria-controls="dropd-card">
+                        <svg width="24" height="24" aria-label="Dropdown icon">
+                            <use class="arrow" href="#icon-angd" />
+                        </svg>
+                    </button>
+                    <h1 class="container__guide-lead title-lg">
+                        Setup guide
+                    </h1>
+                    <div class="container__guide-text">
+                        Use this personalized guide to get your store up and running.
+                    </div>
+                    <div class="container__guide-span">
+                        <label id="range-label" for="range-rule">
+                            <span id="range-text" class="container__guide-count">0 / 5 completed</span>
+                        </label>
+                        <span id="range-rule" class="container__guide-track" role="progressbar"
+                            aria-labelledby="range-label">
+                            <span id="range-pipe" class="container__guide-inner" role="presentation" data-val="0"
+                                data-max="5">
                             </span>
                         </span>
                     </div>
-                    <div class="setup_steps">
-                        <div class="setup_step flex">
-                            <div class="tick opened"><img src="img/load.svg" alt=""></div>
-                            <div class="customize step_info">
-                                <h4>Customize your online store</h4>
-                                <div class="toggle">
-                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a
-                                            href="" class="learn">Learn more</a></p>
-                                    <a href="" class="set_btn">Customize theme</a>
-                                </div>
+                    <div id="dropd-card" class="container__guide-steps" role="tablist" aria-labelledby="dropd-icon">
+                        <div class="container__level flex level-card">
+                            <div class="container__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
                             </div>
-
-                            <div class="step_img">
-                                <img src="img/Customize.png" alt="">
+                            <div>
+                                <button id="tab-1" class="container__level-title title-md title" role="tab" tabindex="0"
+                                    aria-expanded="true" aria-controls="panel-1">
+                                    Customize your online store
+                                </button>
+                                <div id="panel-1" class="container__level-panel flex show panel" role="tabpanel"
+                                    tabindex="0" aria-labelledby="tab-1">
+                                    <div>
+                                        <p class="container__level-learn">
+                                            Choose a theme and add your logo, colors, and images to reflect your brand.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Customize theme
+                                        </button>
+                                    </div>
+                                    <div class="container__level-image">
+                                        <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="Customize your online store">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="setup_step flex">
-                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
-                            <div class="customize step_info">
-                                <h4>Add your first product</h4>
-                                <div class="toggle">
-                                    <p>Write a description, add photos, and set pricing for the products you plan to
-                                        sell.<a href="" class="learn">Learn more</a></p>
-                                    <a href="" class="set_btn">Add product</a>
-                                </div>
+                        <div class="container__level flex level-card">
+                            <div class="container__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
                             </div>
-
-                            <div class="step_img">
-                                <img src="img/product.png" alt="">
+                            <div>
+                                <button id="tab-2" class="container__level-title title-md title" tabindex="0"
+                                    aria-expanded="false" aria-controls="panel-2">
+                                    Add your first product
+                                </button>
+                                <div id="panel-2" class="container__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-2">
+                                    <div>
+                                        <p class="container__level-learn">
+                                            Write a description, add photos, and set pricing for the products you plan
+                                            to sell.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <div class="flex">
+                                            <button class="btn btn--night">
+                                                Add product
+                                            </button>
+                                            <button class="container__level-other">
+                                                Import product
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="container__level-image">
+                                        <img src="https://crushingit.tech/hackathon-assets/product.png" alt=" Add your first product">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="setup_step flex">
-                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
-                            <div class="customize step_info">
-                                <h4>Add your a custom domain</h4>
-                                <div class="toggle">
-                                    <p>Your current domain is 222219.myshopify.com but you can add a custom domain to
-                                        help customers find your online store.<a href="" class="learn">Learn more</a>
-                                    </p>
-                                    <a href="" class="set_btn">Add domain</a>
-                                </div>
+                        <div class="container__level flex level-card">
+                            <div class="container__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
                             </div>
-
-                            <div class="step_img">
-                                <img src="img/domain.png" alt="">
+                            <div>
+                                <button id="tab-3" class="container__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-3">
+                                    Add a custom domain
+                                </button>
+                                <div id="panel-3" class="container__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-3">
+                                    <div>
+                                        <p class="container__level-learn">
+                                            Your current domain is 222219.myshopify.com but you can add a custom domain
+                                            to help customers find your online store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Add domain
+                                        </button>
+                                    </div>
+                                    <div class="container__level-image">
+                                        <img src="https://crushingit.tech/hackathon-assets/website.png" alt="Add a custom domain">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="setup_step flex">
-                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
-                            <div class="customize step_info">
-                                <h4>Name your store</h4>
-                                <div class="toggle">
-                                    <p>Your temporary store name is currently Davii collections. The store name appears
-                                        in your admin and your online store.<a href="" class="learn">Learn more</a></p>
-                                    <a href="" class="set_btn">Name store</a>
-                                </div>
+                        <div class="container__level flex level-card">
+                            <div class="container__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
                             </div>
-                            <div class="step_img">
-                                <img src="img/namestore.png" alt="">
+                            <div>
+                                <button id="tab-4" class="container__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-4">
+                                    Name your store
+                                </button>
+                                <div id="panel-4" class="container__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-4">
+                                    <div>
+                                        <p class="container__level-learn">
+                                            Your temporary store name is currently Davii collections. The store name
+                                            appears in your admin and your online store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Name store
+                                        </button>
+                                    </div>
+                                    <div class="container__level-image">
+                                        <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="Name your store">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="setup_step flex">
-                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
-                            <div class="customize step_info">
-                                <h4>Set up a payment provider</h4>
-                                <div class="toggle">
-                                    <p>Choose a payment provider to start accepting payments. You’ll need to create an
-                                        account with the payment provider and set it up with your Shopify store.<a
-                                            href="" class="learn">Learn more</a></p>
-                                    <a href="" class="set_btn">Set up payment</a>
-                                </div>
+                        <div class="container__level flex level-card">
+                            <div class="container__level-check check flex" data-state="idle">
+                                <svg width="24" height="24" fill="none">
+                                    <use href="#icon-dash" />
+                                </svg>
                             </div>
-                            <div class="step_img">
-                                <img src="img/payment.png" alt="">
+                            <div>
+                                <button id="tab-5" class="container__level-title title-md title" aria-expanded="false"
+                                    aria-controls="panel-5">
+                                    Set up a payment provider
+                                </button>
+                                <div id="panel-5" class="container__level-panel flex" role="tabpanel" tabindex="0"
+                                    aria-labelledby="tab-5">
+                                    <div>
+                                        <p class="container__level-learn">
+                                            Choose a payment provider to start accepting payments. You'll need to create
+                                            an account with the payment provider and set it up with your Shopify store.
+                                            <a class="link" href="https://help.shopify.com/">Learn more</a>
+                                        </p>
+                                        <button class="btn btn--night">
+                                            Set up payment
+                                        </button>
+                                    </div>
+                                    <div class="container__level-image">
+                                        <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="Set up a payment provider">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
-    <script type="text/javascript" src="script.js"></script>
+    <!-- Script -->
+    <script src="./app.js"></script>
 </body>
 
 </html>
