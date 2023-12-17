@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-   <link rel="stylesheet" href="style.css">
-    <title>hackathon shopify</title>
+    <link rel="stylesheet" href="style.css">
+    <title>shopp merch-admin</title>
 </head>
+
 <body>
     <main class="main">
         <header class="head flex">
-            <a href="shopify.com" class="logo flex">
-            <img src="img/shop.svg" alt="">
-           <i>shopify</i> 
+            <a href="https://shopify.com" class="logo flex">
+                <img src="img/shop.svg" alt="">
+                <i>shopify</i>
             </a>
             <div class="search flex">
-                <img src="img/search.svg"/>   
-                <input  type="text" id="input1" placeholder="Search" class="input"/> 
+                <img src="img/search.svg" />
+                <input type="text" id="input1" placeholder="Search" class="input" />
             </div>
             <div class="user_tag flex">
                 <img src="img/bell.svg" alt="" class="bell">
-             <div class="acct flex">
-                 <p class="acct_name">Davii Collections</p>
-                 <p class="acct_icon">DC</p>
-             </div>
+                <div class="acct flex">
+                    <p class="acct_name">Davii Collections</p>
+                    <p class="acct_icon">DC</p>
+                </div>
             </div>
         </header>
         <section class="menus">
             <div class="menu_head flex">
                 <div class="  flex">
-                     <p class="acct_icon">DC</p>
-                      <h4 class="menu_acct_name">Davii Collections</h4>
+                    <p class="acct_icon">DC</p>
+                    <h4 class="menu_acct_name">Davii Collections</h4>
                 </div>
                 <img src="img/ticked.svg" alt="">
-               </div> 
-               <div class="sub-menu">
-               <a href="" class="flex store"> 
-                <img src="img/house.svg" alt=""> All Stores</a>
-                <div class="hr"><hr></div>
+            </div>
+            <div class="sub-menu">
+                <a href="" class="flex store">
+                    <img src="img/house.svg" alt=""> All Stores</a>
+                <div class="hr">
+                    <hr>
+                </div>
                 <a href="" class="flex">Help Center</a>
                 <a href="" class="flex">Changelog</a>
                 <a href="" class="flex">Community forums</a>
                 <a href="" class="flex">Hire a Shopify Partner</a>
                 <a href="" class="flex">Keyboard shortcuts</a>
-                <div class="hr"><hr></div>
-                <a href="" class="flex acct-mail"> <p>David Micheal </p> <p class="email">davidmicheal@gmail.com</p> </a>
+                <div class="hr">
+                    <hr>
+                </div>
+                <a href="" class="flex acct-mail">
+                    <p>David Micheal </p>
+                    <p class="email">davidmicheal@gmail.com</p>
+                </a>
                 <a href="" class="flex">Manage account</a>
                 <a href="" class="flex">Log Out</a>
             </div>
@@ -65,99 +74,109 @@
         </section>
         <section class="inner flex">
             <div class="inner_info">
-             <div class="plan_notifi flex">
-            <p>Extend your trial for $1/month for 3 months on select plans.</p>
-            <div class="select_notifi flex">
-                <a href="" class="select">Select a plan</a>
-                <img src="img/x.svg" class="x" alt="">
+                <div class="plan_notifi flex">
+                    <p>Extend your trial for $1/month for 3 months on select plans.</p>
+                    <div class="select_notifi flex">
+                        <a href="" class="select">Select a plan</a>
+                        <img src="img/x.svg" class="close" alt="">
+                    </div>
+                </div>
+                <div class="guide_setup ">
+                    <div class="setup_head flex space_bwt">
+                        <h4>Setup guide</h4>
+                        <img src="img/down.svg" class="down" alt="">
+                    </div>
+                    <p>Use this personalized guide to get your store up and running</p>
+                    <div class="flex">
+                        <span class="guide_no">1/5 completed</span>
+                        <span class="guide_track">
+                            <span class="guide_trk_inner">
+                            </span>
+                        </span>
+                    </div>
+                    <div class="setup_steps">
+                        <div class="setup_step flex">
+                            <div class="tick opened"><img src="img/load.svg" alt=""></div>
+                            <div class="customize step_info">
+                                <h4>Customize your online store</h4>
+                                <div class="toggle">
+                                    <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a
+                                            href="" class="learn">Learn more</a></p>
+                                    <a href="" class="set_btn">Customize theme</a>
+                                </div>
+                            </div>
+
+                            <div class="step_img">
+                                <img src="img/Customize.png" alt="">
+                            </div>
+                        </div>
+                        <div class="setup_step flex">
+                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
+                            <div class="customize step_info">
+                                <h4>Add your first product</h4>
+                                <div class="toggle">
+                                    <p>Write a description, add photos, and set pricing for the products you plan to
+                                        sell.<a href="" class="learn">Learn more</a></p>
+                                    <a href="" class="set_btn">Add product</a>
+                                </div>
+                            </div>
+
+                            <div class="step_img">
+                                <img src="img/product.png" alt="">
+                            </div>
+                        </div>
+                        <div class="setup_step flex">
+                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
+                            <div class="customize step_info">
+                                <h4>Add your a custom domain</h4>
+                                <div class="toggle">
+                                    <p>Your current domain is 222219.myshopify.com but you can add a custom domain to
+                                        help customers find your online store.<a href="" class="learn">Learn more</a>
+                                    </p>
+                                    <a href="" class="set_btn">Add domain</a>
+                                </div>
+                            </div>
+
+                            <div class="step_img">
+                                <img src="img/domain.png" alt="">
+                            </div>
+                        </div>
+                        <div class="setup_step flex">
+                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
+                            <div class="customize step_info">
+                                <h4>Name your store</h4>
+                                <div class="toggle">
+                                    <p>Your temporary store name is currently Davii collections. The store name appears
+                                        in your admin and your online store.<a href="" class="learn">Learn more</a></p>
+                                    <a href="" class="set_btn">Name store</a>
+                                </div>
+                            </div>
+                            <div class="step_img">
+                                <img src="img/namestore.png" alt="">
+                            </div>
+                        </div>
+                        <div class="setup_step flex">
+                            <div class="tick closed"><img src="img/load.svg" alt=""></div>
+                            <div class="customize step_info">
+                                <h4>Set up a payment provider</h4>
+                                <div class="toggle">
+                                    <p>Choose a payment provider to start accepting payments. You’ll need to create an
+                                        account with the payment provider and set it up with your Shopify store.<a
+                                            href="" class="learn">Learn more</a></p>
+                                    <a href="" class="set_btn">Set up payment</a>
+                                </div>
+                            </div>
+                            <div class="step_img">
+                                <img src="img/payment.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="guide_setup ">
-            <div class="setup_head flex space_bwt">
-                 <h4>Setup guide</h4>
-                 <img src="img/down.svg" class="down" alt="">
-            </div>
-           <p>Use this personalized guide to get your store up and running</p>
-           <div class="flex">
-             <span class="guide_no">1/5 completed</span>   <span class="guide_track">
-                <span class="guide_trk_inner" >
-                </span>
-               </span>
-           </div>
-           <div class="setup_steps">
-            <div class="setup_step flex">
-                 <div class="tick"><img src="img/load.svg" alt=""></div>
-               <div class="customize step_info">
-               <h4>Customize your online store</h4>
-               <div class="toggle">
-                <p>Choose a theme and add your logo, colors, and images to reflect your brand. <a href="" class="learn">Learn more</a></p>
-                <a href="" class="set_btn">Customize theme</a>
-               </div>
-               </div>
-               
-               <div class="step_img">
-                   <img src="img/Customize.png" alt="">
-               </div>
-            </div>
-            <div class="setup_step flex">
-                <div class="tick"><img src="img/load.svg" alt=""></div>
-              <div class="customize step_info">
-              <h4>Add your first product</h4>
-              <div class="toggle">
-               <p>Write a description, add photos, and set pricing for the products you plan to sell.<a href="" class="learn">Learn more</a></p>
-               <a href="" class="set_btn">Add product</a>
-              </div>
-              </div>
-              
-              <div class="step_img">
-                  <img src="img/product.png" alt="">
-              </div>
-           </div>
-       <div class="setup_step flex">
-        <div class="tick"><img src="img/load.svg" alt=""></div>
-      <div class="customize step_info">
-      <h4>Add your a custom domain</h4>
-      <div class="toggle">
-       <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store.<a href="" class="learn">Learn more</a></p>
-       <a href="" class="set_btn">Add domain</a>
-      </div>
-      </div>
-      
-      <div class="step_img">
-          <img src="img/domain.png" alt="">
-      </div>
-   </div>
-   <div class="setup_step flex">
-    <div class="tick"><img src="img/load.svg" alt=""></div>
-  <div class="customize step_info">
-  <h4>Name your store</h4>
-  <div class="toggle">
-   <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store.<a href="" class="learn">Learn more</a></p>
-   <a href="" class="set_btn">Name store</a>
-  </div>
-  </div>
-  <div class="step_img">
-      <img src="img/namestore.png" alt="">
-  </div>
-</div>
-<div class="setup_step flex">
-    <div class="tick"><img src="img/load.svg" alt=""></div>
-  <div class="customize step_info">
-  <h4>Set up a payment provider</h4>
-  <div class="toggle">
-   <p>Choose a payment provider to start accepting payments. You’ll need to create an account with the payment provider and set it up with your Shopify store.<a href="" class="learn">Learn more</a></p>
-   <a href="" class="set_btn">Set up payment</a>
-  </div>
-  </div>
-  <div class="step_img">
-      <img src="img/payment.png" alt="">
-  </div>
-</div>
-           </div>
-        </div>   
-            </div>
-        
+
         </section>
     </main>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
