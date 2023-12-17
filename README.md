@@ -5,8 +5,10 @@ This is a Shopify merch Adnmin dashboard project inspired by Frantz Katz Hackath
 
 
 ### Screenshot
+Desktop view
 
-![](./images/shopifydesk.jpg)
+![](./img/shopifydesk.jpg)
 
 Mobile view
+
 ![](./img/shopify_mobile.jpg)
